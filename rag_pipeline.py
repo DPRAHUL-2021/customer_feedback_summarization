@@ -17,7 +17,7 @@ embeddings = np.load(EMB_FILE).astype("float32")
 
 model = SentenceTransformer(MODEL_NAME)
 
-genai.configure(api_key="AIzaSyCOSo1dDD5iQucfPfGEXSkizly5N-rb0YA")
+genai.configure(api_key="YOUR_GEMINI_API_KEY")
 llm = genai.GenerativeModel("models/gemini-2.5-flash")
 
 # ---------- FUNCTIONS ----------
@@ -56,3 +56,4 @@ Generate:
 
     response = llm.generate_content(prompt)
     return response.text.strip()
+
